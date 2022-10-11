@@ -1,0 +1,11 @@
+version: "3"
+services:
+  tuic:
+    image: monkeyray/tuic:latest
+    restart: always
+    container_name: tuic
+    network_mode: host
+    volumes:
+      - ./config.json:/etc/tuic/config.json:ro
+      - ./fullchain.pem:/etc/tuic/fullchain.pem:ro
+      - ./private.pem:/etc/tuic/private.pem:ro
