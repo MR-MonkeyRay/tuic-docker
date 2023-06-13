@@ -5,7 +5,7 @@ ARG ARCH=x86_64-unknown-linux-musl
 
 WORKDIR /etc/tuic
 
-RUN wget https://github.com/EAimTY/tuic/releases/download/${TUIC_VERSION}/tuic-server-${TUIC_VERSION}-${ARCH} \
+RUN wget https://github.com/EAimTY/tuic/releases/download/tuic-server-${TUIC_VERSION}/tuic-server-${TUIC_VERSION}-${ARCH} \
     -O /usr/bin/tuic-server \
 &&  chmod +x /usr/bin/tuic-server
 
