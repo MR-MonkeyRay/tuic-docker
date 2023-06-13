@@ -1,14 +1,14 @@
 {
-  "port": 443,
-  "token": ["TOKEN0", "TOKEN1"],
-  "certificate": "/etc/tuic/CERT",
-  "private_key": "/etc/tuic/PRIV_KEY",
-
-  "ip": "0.0.0.0",
-  "congestion_controller": "bbr",
-  "max_idle_time": 15000,
-  "authentication_timeout": 1000,
-  "alpn": ["h3"],
-  "max_udp_relay_packet_size": 1500,
+  "server": "[::]:443",
+  "users": {
+    "3e7bc2a8-5107-4bf1-81cf-30bdc091ad4b": "qXINaU9KliBfjJ0g",
+    "72a32f5f-dd6e-4c5f-99a1-1249d0b29deb": "5adNteJe3LZRDS01"
+  },
+  "certificate": "/etc/tuic/fullchain.pem",
+  "private_key": "/etc/tuic/private.pem",
+  "congestion_control": "bbr",
+  "alpn": ["h3", "spdy/3.1"],
+  "dual_stack": true,
+  "max_idle_time": "300s",
   "log_level": "info"
 }
